@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/card/static/css/main.aea5ff83.css",
+    "main.js": "/card/static/js/main.c0f225b5.js",
+    "static/js/787.a1a86bb0.chunk.js": "/card/static/js/787.a1a86bb0.chunk.js",
+    "static/media/resume.pdf": "/card/static/media/resume.a99ddee6cb5327e69f27.pdf",
+    "static/media/brockmann-medium-webfont.woff2": "/card/static/media/brockmann-medium-webfont.7d8074598c7891ff9438.woff2",
+    "index.html": "/card/index.html",
+    "main.aea5ff83.css.map": "/card/static/css/main.aea5ff83.css.map",
+    "main.c0f225b5.js.map": "/card/static/js/main.c0f225b5.js.map",
+    "787.a1a86bb0.chunk.js.map": "/card/static/js/787.a1a86bb0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aea5ff83.css",
+    "static/js/main.c0f225b5.js"
+  ]
+}

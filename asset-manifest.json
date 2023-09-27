@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/test/static/css/main.cdb843ee.css",
-    "main.js": "/test/static/js/main.b9e0518c.js",
-    "static/js/787.a1a86bb0.chunk.js": "/test/static/js/787.a1a86bb0.chunk.js",
-    "static/media/resume.pdf": "/test/static/media/resume.a99ddee6cb5327e69f27.pdf",
-    "static/media/brockmann-medium-webfont.woff2": "/test/static/media/brockmann-medium-webfont.7d8074598c7891ff9438.woff2",
-    "index.html": "/test/index.html",
-    "main.cdb843ee.css.map": "/test/static/css/main.cdb843ee.css.map",
-    "main.b9e0518c.js.map": "/test/static/js/main.b9e0518c.js.map",
-    "787.a1a86bb0.chunk.js.map": "/test/static/js/787.a1a86bb0.chunk.js.map"
+    "main.css": "/card/static/css/main.aea5ff83.css",
+    "main.js": "/card/static/js/main.c0f225b5.js",
+    "static/js/787.a1a86bb0.chunk.js": "/card/static/js/787.a1a86bb0.chunk.js",
+    "static/media/resume.pdf": "/card/static/media/resume.a99ddee6cb5327e69f27.pdf",
+    "static/media/brockmann-medium-webfont.woff2": "/card/static/media/brockmann-medium-webfont.7d8074598c7891ff9438.woff2",
+    "index.html": "/card/index.html",
+    "main.aea5ff83.css.map": "/card/static/css/main.aea5ff83.css.map",
+    "main.c0f225b5.js.map": "/card/static/js/main.c0f225b5.js.map",
+    "787.a1a86bb0.chunk.js.map": "/card/static/js/787.a1a86bb0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdb843ee.css",
-    "static/js/main.b9e0518c.js"
+    "static/css/main.aea5ff83.css",
+    "static/js/main.c0f225b5.js"
   ]
 }

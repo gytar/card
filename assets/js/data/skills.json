@@ -1,0 +1,130 @@
+{
+    "php": {
+        "rate": 0.6,
+        "imgSrc": "./assets/img/php.webp",
+        "imgAlt": "PHP",
+        "containerTitle": "",
+        "type": "programming-language",
+        "comment": ""
+    },
+    "js": {
+        "rate": 0.7,
+        "imgSrc": "./assets/img/js.webp",
+        "imgAlt": "JavaScript",
+        "containerTitle": "",
+        "type": "programming-language",
+        "comment": ""
+    },
+    "ts": {
+        "rate": 0.3,
+        "imgSrc": "./assets/img/ts.webp",
+        "imgAlt": "TypeScript",
+        "containerTitle": "",
+        "type": "programming-language",
+        "comment": ""
+    },
+    "py": {
+        "rate": 0.9,
+        "imgSrc": "./assets/img/py.webp",
+        "imgAlt": "Python",
+        "containerTitle": "",
+        "type": "programming-language",
+        "comment": ""
+    },
+    "rb": {
+        "rate": 0.1,
+        "imgSrc": "./assets/img/rb.webp",
+        "imgAlt": "Ruby",
+        "containerTitle": "",
+        "type": "programming-language",
+        "comment": ""
+    },
+    "vue-js": {
+        "rate": 0.3,
+        "imgSrc": "./assets/img/vue-js.webp",
+        "imgAlt": "Vue.js",
+        "containerTitle": "",
+        "type": "frontend-framework",
+        "comment": ""
+    },
+    "symfony": {
+        "rate": 0.3,
+        "imgSrc": "./assets/img/symfony.webp",
+        "imgAlt": "Symfony",
+        "containerTitle": "",
+        "type": "backend-framework",
+        "comment": ""
+    },
+    "django": {
+        "rate": 0.3,
+        "imgSrc": "./assets/img/django.webp",
+        "imgAlt": "Django",
+        "containerTitle": "",
+        "type": "backend-framework",
+        "comment": ""
+    },
+    "ruby-on-rails": {
+        "rate": 0.3,
+        "imgSrc": "./assets/img/ruby-on-rails.webp",
+        "imgAlt": "Ruby on rails",
+        "containerTitle": "",
+        "type": "backend-framework",
+        "comment": ""
+    },
+    "odoo": {
+        "rate": 0.3,
+        "imgSrc": "./assets/img/odoo.webp",
+        "imgAlt": "Odoo",
+        "containerTitle": "",
+        "type": "erp",
+        "comment": ""
+    },
+    "tailwindcss": {
+        "rate": 0.3,
+        "imgSrc": "./assets/img/tailwindcss.webp",
+        "imgAlt": "TailWind CSS",
+        "containerTitle": "",
+        "type": "style-library",
+        "comment": ""
+    },
+    "bootstrap": {
+        "rate": 0.3,
+        "imgSrc": "./assets/img/bootstrap.webp",
+        "imgAlt": "Bootstrap",
+        "containerTitle": "",
+        "type": "style-library",
+        "comment": ""
+    },
+    "linux": {
+        "rate": 0.8,
+        "imgSrc": "./assets/img/linux.webp",
+        "imgAlt": "Linux",
+        "containerTitle": "",
+        "type": "dev-ops",
+        "comment": ""
+    },
+    "docker": {
+        "rate": 0.5,
+        "imgSrc": "./assets/img/docker.webp",
+        "imgAlt": "Docker",
+        "containerTitle": "",
+        "type": "dev-ops",
+        "comment": ""
+    },
+    "en": {
+        "rate": 1,
+        "imgSrc": "./assets/img/en.webp",
+        "imgAlt": "Anglais",
+        "containerTitle": "",
+        "type": "language",
+        "comment": ""
+    },
+    "es": {
+        "rate": 0.3,
+        "imgSrc": "./assets/img/es.webp",
+        "imgAlt": "Espagnol",
+        "containerTitle": "",
+        "type": "language",
+        "comment": ""
+    }
+}

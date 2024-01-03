@@ -1,5 +1,5 @@
 /**
- * Program to create ratio bar for skills
+ * Program to create the container for skills
  */
 /**
  * Skills JSON data transformed into an object
@@ -10,14 +10,14 @@ const SKILLS = await fetch('assets/js/data/skills.json').then((response) => resp
  * 
  * @param {Object} skill
  * @param {string} skill.imgSrc
- * @param {string} skill.imgAlt 
- * @returns 
+ * @param {string} skill.name 
+ * @returns {HTMLImageElement} the image created
  */
 const createImgFromSkill = skill => {
     const img = document.createElement('img');
-    // img.classList.add();
     img.src = skill.imgSrc;
-    img.alt = skill.imgAlt;
+    img.alt = skill.name;
+    img.style.maxHeight = "40px";
     return img
 }
 
@@ -31,18 +31,27 @@ const createRatioElement = (bar, skill) => {
     const ratioEl = document.createElement('div');
     ratioEl.classList.add('skill-ratio');
     // Width of ratio is `rate * bar's width` (use getBoundingClientRect to get width after CSS transforms if any)
-    ratioEl.width = skill.rate * bar.getBoundingClientRect().width;
+    const width = skill.rate * bar.getBoundingClientRect().width;
+    ratioEl.style.width = `${width}px`;
+    if (skill.rate === 1) {
+        ratioEl.style.borderRadius = ".2em";
+    }
     bar.appendChild(ratioEl);
 }
 
 /**
  * 
- * @param {HTMLDivElement} optionalComment 
+ * @param {HTMLDivElement} nameDiv 
  * @param {object} skill 
- * @param {string} skill.comment
+ * @param {string} skill.name
+ * @param {string} skill.type
  */
-const createOptionalComment = (optionalComment, skill) => {
-    optionalComment.innerText = skill.comment;
+const addTitle = (nameDiv, skill) => {
+    if (window.innerWidth > 1023 || skill.type === "language") {
+        nameDiv.innerText = skill.name;
+    } else {
+        nameDiv.remove();
+    }
 }
 
 /**
@@ -53,15 +62,17 @@ const populateSkillContainers = (section) => {
     const containers = section.querySelectorAll(".skill-container");
 
     containers.forEach(container => {
-        /** @type {{rate: number, imgSrc: string, imgAlt: string, containerTitle: string, type: string, comment: string}} */
+        /** @type {{rate: number, imgSrc: string, name: string, containerTitle: string, type: string, comment: string}} */
         const skill = SKILLS[container.dataset.skillName];
         const logoDiv = container.querySelector("div.skill-logo");
         const barDiv = container.querySelector("div.skill-bar");
-        const optionalCommentDiv = container.querySelector("div.skill-optional-comment");
+        const nameDiv = container.querySelector("div.skill-name");
 
-        logoDiv.appendChild(createImgFromSkill(skill));
+        addTitle(nameDiv, skill);
         createRatioElement(barDiv, skill);
-        createOptionalComment(optionalCommentDiv, skill);
+        if (logoDiv !== null) {
+            logoDiv.appendChild(createImgFromSkill(skill));
+        }
     });
 }
 

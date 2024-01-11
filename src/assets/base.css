@@ -1,4 +1,7 @@
-/* color palette from <https://github.com/vuejs/theme> */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -19,34 +22,45 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --dark: #262428;
+  --light: #FFFFFF;
+  --violet-dark: #5229A3;
+  --violet-light: #855CD6;
+  --rose-dark: #8F29A3;
+  --rose-light: #C25CD6;
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
+  --color-background: var(--light);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
 
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
+  --color-border: var(--dark);
+  --color-border-hover: var(--dark);
 
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-heading: var(--violet-dark);
+  --color-text: var(--dark);
 
   --section-gap: 160px;
+  --primary: var(--violet-dark);
+  --secondary: var(--rose-dark);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
+    --color-background: var(--dark);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
 
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
+    --color-border: var(--light);
+    --color-border-hover: var(--light);
 
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    --color-heading: var(--violet-light);
+    --color-text: var(--light);
+    --primary: var(--violet-light);
+    --secondary: var(--rose-light);
   }
 }
 
@@ -67,6 +81,7 @@ body {
     background-color 0.5s;
   line-height: 1.6;
   font-family:
+    'Quicksand',
     Inter,
     -apple-system,
     BlinkMacSystemFont,

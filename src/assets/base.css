@@ -81,7 +81,8 @@ body {
     background-color 0.5s;
   line-height: 1.6;
   font-family:
-    'Quicksand',
+    'Louis George Cafe',
+    /* 'Quicksand',
     Inter,
     -apple-system,
     BlinkMacSystemFont,
@@ -92,7 +93,7 @@ body {
     Cantarell,
     'Fira Sans',
     'Droid Sans',
-    'Helvetica Neue',
+    'Helvetica Neue', */
     sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;

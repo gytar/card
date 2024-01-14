@@ -1,18 +1,21 @@
-import './assets/main.css'
+import './assets/main.css';
 
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-import App from './App.vue';
 import router from './router';
+import axios from "axios";
+import VueAxios from 'vue-axios';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faDownload } from '@fortawesome/free-solid-svg-icons';
+import App from './App.vue';
 
-library.add(faAngleDown);
+library.add(faAngleDown, faDownload);
 
-const app = createApp(App)
-app.component("font-awesome-icon", FontAwesomeIcon)
-app.use(createPinia())
-app.use(router)
-
-app.mount('#app')
+const app = createApp(App);
+app.component("font-awesome-icon", FontAwesomeIcon);
+app.use(createPinia());
+app.use(router);
+app.use(VueAxios, axios);
+app.provide('axios', app.config.globalProperties.axios);
+app.mount('#app');

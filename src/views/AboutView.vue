@@ -1,5 +1,5 @@
 <template>
-  <div class="about p-2 flex items-center justify-center flex-col">
+  <div class="about p-2 flex items-center justify-center xl:justify-around flex-col">
     <div class="detailed-me p-3">
       <div class="flex items-center justify-between mb-5">
         <h2 class="text-5xl font-bold">Qui suis-je ?</h2>
@@ -11,7 +11,7 @@
         l’écologie. Il me semble que nous devons toutes et tous faire de notre mieux dans notre domaine en donnant le
         meilleur de nous même.</p>
     </div>
-    <div class="tldr mt-5">
+    <div class="tldr mt-5 xl:mt-0">
       <h2 class="text-5xl font-bold">TL;DR</h2>
       <div class="grid lg:grid-cols-2 gap-4 p-3 w-2/3 m-auto">
         <div class="text-center bg-fuchsia-700 text-white text-xl h-10 flex items-center justify-center rounded-sm">
@@ -32,7 +32,7 @@
 
 .about {
   padding-top: 3em;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .detailed-me {

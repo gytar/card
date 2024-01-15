@@ -1,3 +1,6 @@
+<script setup lang="ts">
+import NextLink from '../components/NextLink.vue';
+</script>
 <template>
   <div class="about p-2 flex items-center justify-center xl:justify-around flex-col">
     <div class="detailed-me p-3">
@@ -24,6 +27,7 @@
         </div>
       </div>
     </div>
+    <NextLink link="/experiences" label="Allez voir mes exéperiences"/>
   </div>
 </template>
 

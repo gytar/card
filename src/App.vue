@@ -20,15 +20,16 @@ const resume: Item = {
 
 const downloadItem = (item: Item) => {
   axios.get(item.url).then((response: AxiosResponse) => {
-    var fileURL = window.URL.createObjectURL(new Blob([response.data]));
-    var fURL = document.createElement('a');
+    const resumeObjectURL = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
 
-    fURL.href = fileURL;
-    fURL.setAttribute('download', item.name);
-    document.body.appendChild(fURL);
+    link.href = resumeObjectURL;
+    link.setAttribute('download', item.name);
+    document.body.appendChild(link);
 
-    fURL.click();
-    URL.revokeObjectURL(fURL.href);
+    link.click();
+    // URL.revokeObjectURL(link.href);
+    link.remove();
   })
 }
 </script>
@@ -37,14 +38,14 @@ const downloadItem = (item: Item) => {
   <header>
     <div class="wrapper flex items-center justify-between w-full md:p-3">
       <nav>
-        <RouterLink to="/">Accueil</RouterLink>
-        <RouterLink to="/about">À propos</RouterLink>
+        <RouterLink to="/" title="Accueil" class="home-link"><font-awesome-icon icon="house" /></RouterLink>
+        <!-- <RouterLink to="/about">À propos</RouterLink>
         <RouterLink to="/experiences">Expériences</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
+        <RouterLink to="/contact">Contact</RouterLink> -->
       </nav>
       <div class="download-resume">
-        <a :href="resume.url" @click="downloadItem(resume)" target="_blank" class="download-button">
-          {{ resume.label }} <font-awesome-icon icon="download"></font-awesome-icon>
+        <a :href="resume.url" @click="downloadItem(resume)" target="_blank" class="download-button" :title="resume.label">
+          <font-awesome-icon icon="download"></font-awesome-icon>
         </a>
       </div>
     </div>
@@ -56,7 +57,6 @@ const downloadItem = (item: Item) => {
 <style scoped>
 .wrapper {
   position: absolute;
-  margin: auto;
 }
 
 .wrapper nav {
@@ -68,10 +68,19 @@ const downloadItem = (item: Item) => {
   background: hsl(260, 60%, 40%);
   color: white;
   padding: .5em;
-  border-radius: 2px;
+  border-radius: 3px;
   transition: all .2s ease-in-out;
 }
 .download-button:hover {
   background: hsl(260, 60%, 60%);
+}
+
+.home-link {
+  transition: all .2s ease-in-out;
+}
+
+.home-link:hover {
+  color: hsl(260, 60%, 70%);
+  background: transparent;
 }
 </style>

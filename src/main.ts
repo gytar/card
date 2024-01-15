@@ -7,10 +7,10 @@ import axios from "axios";
 import VueAxios from 'vue-axios';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faAngleDown, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faDownload, faHouse } from '@fortawesome/free-solid-svg-icons';
 import App from './App.vue';
 
-library.add(faAngleDown, faDownload);
+library.add(faAngleDown, faDownload, faHouse);
 
 const app = createApp(App);
 app.component("font-awesome-icon", FontAwesomeIcon);

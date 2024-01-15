@@ -11,9 +11,12 @@ const experiences: Ref<Experience[]> = ref<Experience[]>([ossfactory, wellnessPr
 
 <template>
     <!-- eslint-disable vue/require-v-for-key -->
-    <div class="ExperiencesView">
-        <div v-for="experience in experiences">
-            <ExperienceComp :experience="experience" />
+    <div class="ExperiencesView md:p-6">
+        <h2 class="text-4xl font-bold my-3 text-center">Mes expériences pro</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div v-for="experience in experiences">
+                <ExperienceComp :experience="experience" />
+            </div>
         </div>
         <NextLink link="/contact" label="Alors, on garde contact ?" />
     </div>
@@ -21,8 +24,8 @@ const experiences: Ref<Experience[]> = ref<Experience[]>([ossfactory, wellnessPr
 
 <style scoped>
 .ExperiencesView {
-    padding-top: 2em;
-    min-height: 85vh;
+    padding-top: 4em;
+    min-height: 100vh;
     min-width: 100vw;
 }
 </style>

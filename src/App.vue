@@ -33,14 +33,14 @@ const downloadItem = (item: DownloadableItem) => {
   <header>
     <div class="wrapper flex items-center justify-between w-full md:p-3">
       <nav>
-        <RouterLink to="/" title="Accueil" class="home-link"><font-awesome-icon icon="house" /></RouterLink>
+        <RouterLink to="/" title="Accueil" class="home-link"><font-awesome-icon icon="house" class="text-2xl" /></RouterLink>
         <!-- <RouterLink to="/about">À propos</RouterLink>
         <RouterLink to="/experiences">Expériences</RouterLink>
         <RouterLink to="/contact">Contact</RouterLink> -->
       </nav>
       <div class="download-resume">
         <a :href="resume.url" @click="downloadItem(resume)" target="_blank" class="download-button" :title="resume.label">
-          <font-awesome-icon icon="download"></font-awesome-icon>
+          <font-awesome-icon icon="download" class="text-2xl"></font-awesome-icon>
         </a>
       </div>
     </div>
@@ -62,7 +62,7 @@ const downloadItem = (item: DownloadableItem) => {
 .download-button {
   background: hsl(260, 60%, 40%);
   color: white;
-  padding: .5em;
+  padding: .75em;
   border-radius: 3px;
   transition: all .2s ease-in-out;
 }

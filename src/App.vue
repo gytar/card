@@ -2,6 +2,7 @@
 import { inject } from "vue";
 import { RouterLink, RouterView } from 'vue-router';
 import resumeUrl from './assets/files/CV-Guillaume-Perrot.pdf';
+import type { AxiosResponse } from "axios";
 
 const axios: any = inject('axios');
 
@@ -18,7 +19,7 @@ const resume: Item = {
 }
 
 const downloadItem = (item: Item) => {
-  axios.get(item.url).then((response) => {
+  axios.get(item.url).then((response: AxiosResponse) => {
     var fileURL = window.URL.createObjectURL(new Blob([response.data]));
     var fURL = document.createElement('a');
 

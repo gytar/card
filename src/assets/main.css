@@ -35,5 +35,5 @@ a {
 
 @font-face {
   font-family: 'Louis George Cafe';
-  src: url('~@/assets/fonts/Louis George Cafe.ttf');
+  src: url('./fonts/Louis George Cafe.ttf');
 }

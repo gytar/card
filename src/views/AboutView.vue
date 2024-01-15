@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NextLink from '../components/NextLink.vue';
+import NextLink from '@/components/NextLink.vue';
 </script>
 <template>
   <div class="about p-2 flex items-center justify-center xl:justify-around flex-col">

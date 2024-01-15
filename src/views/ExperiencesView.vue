@@ -1,26 +1,28 @@
 <script setup lang="ts">
-// import { type Experience } from "@/data/Experiences";
+import { ref, type Ref } from 'vue';
+import { ossfactory, wellnessPrevention } from '@/data/ExperiencesData';
+import type { Experience } from '@/models/Experiences';
+import NextLink from '@/components/NextLink.vue';
+import ExperienceComp from '@/components/ExperienceComp.vue';
 
-// const experiences: Array<Experience> = [
-//     {
-//         name: "oss-factory",
-//         label: "Développeur web à OSS Factory",
-//         mission: "Développeur web",
-//         company: "OSS Factory",
-//         place: "Clermont-Ferrand",
-//         dateStart: new Date(2022, 6, 1),
-//         dateEnd: new Date(2023, 8, 16),
-//         description: "- Développement de fonctionnalités dans Odoo\n- Documentation technique pour les utilisateurs\n- Veille informatique pour les nouvelles fonctionnalités et choix de technologies",
-//         technologies: [{name: "odoo", label: "Odoo", knowledge: 0.9}]
 
-//     }
-// ]
+const experiences: Ref<Experience[]> = ref<Experience[]>([ossfactory, wellnessPrevention]);
 </script>
 
 <template>
-    <span>Mes expriences</span>
+    <!-- eslint-disable vue/require-v-for-key -->
+    <div class="ExperiencesView">
+        <div v-for="experience in experiences">
+            <ExperienceComp :experience="experience" />
+        </div>
+        <NextLink link="/contact" label="Alors, on garde contact ?" />
+    </div>
 </template>
 
 <style scoped>
-
+.ExperiencesView {
+    padding-top: 2em;
+    min-height: 85vh;
+    min-width: 100vw;
+}
 </style>

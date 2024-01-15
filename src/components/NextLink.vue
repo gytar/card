@@ -1,18 +1,19 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-const props = defineProps({
-    link: { type: String, required: true },
-    label: { type: String, required: true },
-})
+import type { NextLinkProps } from '@/models/ComponentProps';
+
+const props = defineProps<NextLinkProps>();
 </script>
 
 <template>
-    <span class="mt-5 mb-3 italic dark:text-neutral-300 text-neutral-600">{{ props.label }}</span>
-    <RouterLink :to="props.link" class="next-link">
-        <div class="circle-angle-down">
-            <font-awesome-icon icon="angle-down" />
-        </div>
-    </RouterLink>
+    <div class="NextLink flex flex-col justify-center items-center">
+        <span class="mt-5 mb-3 italic dark:text-neutral-300 text-neutral-600">{{ props.label }}</span>
+        <RouterLink :to="props.link" class="next-link">
+            <div class="circle-angle-down">
+                <font-awesome-icon icon="angle-down" />
+            </div>
+        </RouterLink>
+    </div>
 </template>
 
 <style scoped>

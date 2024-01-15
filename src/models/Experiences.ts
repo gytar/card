@@ -1,9 +1,11 @@
-export type Technology = {
+type Technology = {
     name: String,
     label: String,
     knowledge: Number,
+    website: String,
+    imageUrl: String,  
 }
-export type Experience = {
+type Experience = {
     name: String,
     label: String,
     mission: String,
@@ -17,3 +19,4 @@ export type Experience = {
 
 
 
+export type { Technology, Experience };

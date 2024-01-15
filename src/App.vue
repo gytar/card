@@ -1,24 +1,19 @@
 <script setup lang="ts">
 import { inject } from "vue";
 import { RouterLink, RouterView } from 'vue-router';
-import resumeUrl from './assets/files/CV-Guillaume-Perrot.pdf';
 import type { AxiosResponse } from "axios";
+import type { DownloadableItem } from '@/models/DownloadableItem';
+import resumeUrl from '@/assets/files/CV-Guillaume-Perrot.pdf';
 
 const axios: any = inject('axios');
 
-type Item = {
-  name: string,
-  label: string,
-  url: string
-}
-
-const resume: Item = {
+const resume: DownloadableItem = {
   name: "CV Guillaume Perrot.pdf",
   label: "Télécharger le CV",
   url: resumeUrl,
 }
 
-const downloadItem = (item: Item) => {
+const downloadItem = (item: DownloadableItem) => {
   axios.get(item.url).then((response: AxiosResponse) => {
     const resumeObjectURL = window.URL.createObjectURL(new Blob([response.data]));
     const link = document.createElement('a');
@@ -71,6 +66,7 @@ const downloadItem = (item: Item) => {
   border-radius: 3px;
   transition: all .2s ease-in-out;
 }
+
 .download-button:hover {
   background: hsl(260, 60%, 60%);
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NextLink from '../components/NextLink.vue';
+import NextLink from '@/components/NextLink.vue';
 </script>
 
 <template>

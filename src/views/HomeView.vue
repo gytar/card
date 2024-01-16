@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NextLink from '@/components/NextLink.vue';
+import NextLinkVue from '@/components/NextLink.vue';
 </script>
 
 <template>
@@ -10,12 +10,10 @@ import NextLink from '@/components/NextLink.vue';
     <div class="banner">
       <h3 class="subtitle md:text-lg lg:text-xl text-center">Concepteur développeur d'applications web et mobile</h3>
     </div>
-    <NextLink link="/about" label="Prêt⋅e⋅s à en voir plus ?" />
+    <NextLinkVue link="/about" label="Prêt⋅e⋅s à en voir plus ?" />
   </main>
 </template>
 <style scoped>
-@import '../assets/base.css';
-
 main {
   padding-top: 2em;
   min-height: 85vh;

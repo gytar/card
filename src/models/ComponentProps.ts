@@ -8,4 +8,10 @@ interface NextLinkProps {
     label: string
 }
 
-export type { ExperienceCompProps, NextLinkProps }
+interface ContactIcon {
+    href: string,
+    title: string,
+    icon: string,
+}
+
+export type { ExperienceCompProps, NextLinkProps, ContactIcon }

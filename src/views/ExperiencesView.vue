@@ -15,12 +15,14 @@ const experiences: Ref<Experience[]> = ref<Experience[]>([ossfactory, wellnessPr
     <!-- eslint-disable vue/require-v-for-key -->
     <PrevLink link="/about" />
     <div class="ExperiencesView md:p-6 flex flex-col justify-around items-center">
+        <!-- Professional experience -->
         <h2 class="text-4xl font-bold my-3 text-center">Mes expériences pro</h2>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
             <div v-for="experience in experiences">
                 <ExperienceComp :experience="experience" />
             </div>
         </div>
+        <!-- Technical skills -->
         <h2 class="text-4xl font-bold my-3 text-center">Mes compétences techniques</h2>
         <div class="skills-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-1/2">
             <div v-for="technology in allTechnologies" class="flex flex-col items-center justify-around">

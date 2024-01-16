@@ -10,21 +10,17 @@ import NextLink from '@/components/NextLink.vue';
       </div>
       <p class="lg:text-xl text-justify mb-2">Développeur web depuis peu, je suis toujours partant pour un nouveau
         challenge. Je suis fan d’informatique, mais aussi de musique et de chats.</p>
-      <p class="lg:text-xl text-justify">Dans mon travail, je prone des valeurs fortes : l’éducation, l’accessibilité et
-        l’écologie. Il me semble que nous devons toutes et tous faire de notre mieux dans notre domaine en donnant le
+      <p class="lg:text-xl text-justify">Dans mon travail, je prone des valeurs fortes : le partage, l’accessibilité et
+        la créativité. Il me semble que nous devons toutes et tous faire de notre mieux dans notre domaine en donnant le
         meilleur de nous même.</p>
     </div>
     <div class="tldr mt-5 xl:mt-0">
       <h2 class="text-5xl font-bold">TL;DR</h2>
       <div class="grid lg:grid-cols-2 gap-4 p-3 w-2/3 m-auto">
-        <div class="text-center bg-fuchsia-700 text-white text-xl h-10 flex items-center justify-center rounded-sm">
-          Passionné</div>
-        <div class="text-center bg-fuchsia-700 text-white text-xl h-10 flex items-center justify-center rounded-sm">
-          Écologie</div>
-        <div class="text-center bg-fuchsia-700 text-white text-xl h-10 flex items-center justify-center rounded-sm">
-          Créatif</div>
-        <div class="text-center bg-fuchsia-700 text-white text-xl h-10 flex items-center justify-center rounded-sm">Motivé
-        </div>
+        <div class="tldr-card text-xl h-10">Autonome</div>
+        <div class="tldr-card text-xl h-10">Comunicatif</div>
+        <div class="tldr-card text-xl h-10">Créatif</div>
+        <div class="tldr-card text-xl h-10">Soif d'apprendre</div>
       </div>
     </div>
     <NextLink link="/experiences" label="Allez voir mes exéperiences"/>
@@ -33,6 +29,17 @@ import NextLink from '@/components/NextLink.vue';
 
 <style>
 @media (min-width: 1024px) {}
+
+.tldr-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  text-align: center;
+  background-color: hsl(290, 60%, 40%);
+  color: white;
+
+}
 
 .about {
   padding-top: 3em;

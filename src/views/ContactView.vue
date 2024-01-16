@@ -1,9 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PrevLink from '@/components/PrevLink.vue';
+</script>
 <template>
+    <PrevLink link="/experiences" />
     <div class="Contact flex flex-col items-center justify-center">
         <h3 class="text-5xl font-bold text-center mb-10">Contact</h3>
         <a href="mailto:perrotguillaume@protonmail.com" target="_blank" rel="noopener noreferrer nofollow" title="Par mail"
-            class="text-6xl">
+            class="text-6xl" aria-label="Envoyer un mail via votre client mail">
             <div class="contact-icon">
                 <font-awesome-icon icon="envelope" />
             </div>
@@ -12,13 +15,13 @@
 
         <div class="grid grid-cols-2 gap-4">
             <a href="https://github.com/gytar" title="Github de Guillaume Perrot (gytar)" target="_blank"
-                rel="noopener noreferrer nofollow" class="text-6xl">
+                rel="noopener noreferrer nofollow" class="text-6xl" aria-label="GitHub de Guillaume Perrot">
                 <div class="contact-icon">
                     <font-awesome-icon icon="fa-brands fa-github" />
                 </div>
             </a>
             <a href="https://www.linkedin.com/in/guillaume-perrot-dev" title="LinkedIn de Guillaume Perrot" target="_blank"
-                rel="noopener noreferrer nofollow" class="text-6xl">
+                rel="noopener noreferrer nofollow" class="text-6xl" aria-label="LinkedIn de Guillaume Perrot">
                 <div class="contact-icon">
                     <font-awesome-icon icon="fa-brands fa-linkedin" />
                 </div>

@@ -70,5 +70,8 @@ main {
   width: 75%;
   font-weight: bold;
   transform: rotate(-1deg);
+  color: white;
 }
+
+
 </style>

@@ -33,13 +33,13 @@ const downloadItem = (item: DownloadableItem) => {
   <header>
     <div class="wrapper flex items-center justify-between w-full md:p-3">
       <nav>
-        <RouterLink to="/" title="Accueil" class="home-link"><font-awesome-icon icon="house" class="text-2xl" /></RouterLink>
+        <RouterLink to="/" title="Accueil" class="home-link" aria-label="Accueil"><font-awesome-icon icon="house" class="text-2xl" /></RouterLink>
         <!-- <RouterLink to="/about">À propos</RouterLink>
         <RouterLink to="/experiences">Expériences</RouterLink>
         <RouterLink to="/contact">Contact</RouterLink> -->
       </nav>
       <div class="download-resume">
-        <a :href="resume.url" @click="downloadItem(resume)" target="_blank" class="download-button" :title="resume.label">
+        <a :href="resume.url" @click="downloadItem(resume)" target="_blank" class="download-button" :title="resume.label" :aria-label="resume.label">
           <font-awesome-icon icon="download" class="text-2xl"></font-awesome-icon>
         </a>
       </div>

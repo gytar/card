@@ -1,19 +1,23 @@
-type Technology = {
+interface Technology {
     name: String,
     label: String,
     knowledge: Number,
     website: String,
     imageUrl: String,  
 }
-type Experience = {
+interface Experience {
     name: String,
-    label: String,
+    label: string,
     mission: String,
     company: String,
+    companyWebsite: String,
+    companyImageUrl: String,
+    companyDescription: String,
     place: String,
     dateStart: Date,
     dateEnd: Date,
-    description: String,
+    missionDescription: String,
+
     technologies: Array<Technology>
 }
 

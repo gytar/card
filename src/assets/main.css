@@ -11,21 +11,9 @@
 
 a {
   text-decoration: none;
-  color: hsla(260, 60%, 40%, 1);
-  transition: 0.2s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(260, 60%, 40%, 0.2);
-  }
 }
 
 @media (prefers-color-scheme: dark) {
-  a {
-    color: hsla(260, 60%, 60%, 1);
-  }
   @media (hover: hover) {
     a:hover {
       background-color: hsla(260, 60%, 60%, 0.2);
@@ -37,3 +25,4 @@ a {
   font-family: 'Louis George Cafe';
   src: url('./fonts/Louis George Cafe.ttf');
 }
+

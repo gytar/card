@@ -36,9 +36,17 @@ const experiences: Ref<Experience[]> = ref<Experience[]>([ossfactory, wellnessPr
 
 <style scoped>
 .ExperiencesView {
-    padding-top: 4em;
+    padding-top: 8.5em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
     min-height: 100vh;
     max-width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+    .ExperiencesView {
+        padding-top: 4em;
+    }
 }
 
 .technology-img {

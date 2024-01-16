@@ -105,15 +105,21 @@ const modal = reactive({
     top: 0;
     left: 0;
     width: 100vw;
-    min-height: 100vh;
+    min-height: 100%;
     /* transform: translate(-50%, -30%); */
     padding: 1em;
     background: hsl(290, 60%, 40%);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     color: white;
+}
+
+@media screen and (min-width: 1024px) {
+    .ExperienceModalVisible {
+        justify-content: space-around;
+    }
 }
 
 .ExperienceModalHidden {

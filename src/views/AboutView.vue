@@ -1,35 +1,44 @@
 <script setup lang="ts">
 import NextLink from '@/components/NextLink.vue';
+import meUrl from '@/assets/img/me.webp';
 </script>
 <template>
   <div class="about p-2 flex items-center justify-center xl:justify-around flex-col">
     <div class="detailed-me p-3 text-white">
       <div class="flex items-center justify-between mb-5">
-        <h2 class="text-5xl font-bold">Qui suis-je ?</h2>
-        <div>pic</div>
+        <h2 class="md:text-5xl text-3xl font-bold">Qui suis-je ?</h2>
+        <!-- TODO: insert picture here -->
+        <div class="picture-me-container">
+          <img :src="meUrl" alt="Oh mais c'est moi là" class="picture-me">
+        </div>
       </div>
-      <p class="lg:text-xl text-justify mb-2">Développeur web depuis peu, je suis toujours partant pour un nouveau
-        challenge. Je suis fan d’informatique, mais aussi de musique et de chats.</p>
-      <p class="lg:text-xl text-justify">Dans mon travail, je prone des valeurs fortes : le partage, l’accessibilité et
-        la créativité. Il me semble que nous devons toutes et tous faire de notre mieux dans notre domaine en donnant le
-        meilleur de nous même.</p>
+      <p class="text-justify mb-2">Je suis Guillaume Perrot, développeur web passionné par la transformation
+        d'idées en expériences captivantes. Ma force réside dans la fusion de la créativité, de la communication
+        transparente et d'une expertise technique pointue. Chaque ligne de code que je crée est imprégnée d'une esthétique
+        soignée, tandis que ma capacité à comprendre vos idées garantit une collaboration fluide. Maîtrisant divers
+        langages et frameworks, je m'engage à développer des solutions robustes et innovantes, restant à la pointe de la
+        technologie.</p>
+
+      <p class="text-justify">Si vous recherchez un partenaire qui va au-delà du simple développement, mais qui apporte
+        une combinaison unique
+        de créativité, de communication efficace et d'expertise technique à votre projet, contactez-moi et donnons vie à
+        vos idées avec excellence et impact.</p>
+
     </div>
     <div class="tldr mt-5 xl:mt-0">
       <h2 class="text-5xl font-bold">TL;DR</h2>
       <div class="grid lg:grid-cols-2 gap-4 p-3 w-2/3 m-auto">
-        <div class="tldr-card text-xl h-10">Autonome</div>
-        <div class="tldr-card text-xl h-10">Comunicatif</div>
-        <div class="tldr-card text-xl h-10">Créatif</div>
-        <div class="tldr-card text-xl h-10">Soif d'apprendre</div>
+        <div class="tldr-card md:text-xl h-10">Passioné</div>
+        <div class="tldr-card md:text-xl h-10">Communicatif</div>
+        <div class="tldr-card md:text-xl h-10">Créatif</div>
+        <div class="tldr-card md:text-xl h-10">Expertise</div>
       </div>
     </div>
-    <NextLink link="/experiences" label="Allez voir mes exéperiences"/>
+    <NextLink link="/experiences" label="Allez voir mes exéperiences" />
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {}
-
 .tldr-card {
   display: flex;
   align-items: center;
@@ -59,5 +68,42 @@ import NextLink from '@/components/NextLink.vue';
   width: 90vw;
   padding: 2em;
   color: #262428;
+}
+
+.picture-me-container {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+}
+
+.picture-me {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .picture-me-container {
+    width: 5em;
+    height: 5em;
+  }
+
+  .picture-me {
+    width: 5em;
+    height: 5em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .picture-me-container {
+    width: 7em;
+    height: 7em;
+  }
+
+  .picture-me {
+    width: 7em;
+    height: 7em;
+  }
 }
 </style>

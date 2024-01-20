@@ -1,9 +1,23 @@
+enum TechnologyType {
+    Language = "lang",
+    FrontEndFramework = "frontend",
+    BackEndFramework = "backend",
+    Database = "database",
+    DevOps = "devops",
+    Library = "libraries",
+    ERP = "erp",
+    Mobile = "mobile",
+    Others = "others",
+    
+}
+
 interface Technology {
     name: String,
     label: String,
     knowledge: Number,
     website: String,
     imageUrl: String,  
+    type: TechnologyType,
 }
 interface Experience {
     name: String,
@@ -22,5 +36,5 @@ interface Experience {
 }
 
 
-
+export { TechnologyType };
 export type { Technology, Experience };

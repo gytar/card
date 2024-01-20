@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router';
 import type { DownloadableItem } from '@/models/DownloadableItem';
 import resumeUrl from '@/assets/files/CV-Guillaume-Perrot.pdf';
-import DownloadButtonVue from '@/components/DownloadButton.vue';
+import ShowItemInOtherTabVue from '@/components/ShowItemInOtherTab.vue';
 
 const resume: DownloadableItem = {
   name: "CV Guillaume Perrot.pdf",
@@ -19,7 +19,7 @@ const resume: DownloadableItem = {
           <font-awesome-icon icon="house" class="text-2xl" />
         </RouterLink>
       </nav>
-      <DownloadButtonVue :item="resume" />
+      <ShowItemInOtherTabVue :item="resume" />
     </div>
   </header>
 

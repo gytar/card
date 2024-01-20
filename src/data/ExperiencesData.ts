@@ -1,7 +1,8 @@
 import { type Experience } from "@/models/Experiences";
-import { odoo, postgresql, js, debian, docker, python, git, php, symfony, dart, flutter, redis, mysql } from "./TechnologiesData";
+import { odoo, postgresql, js, debian, docker, python, git, php, symfony, dart, flutter, redis, mysql, java, android, springBoot, angular, nodeJS, electron, bootstrap } from "@/data/TechnologiesData";
 import ossFactoryImgUrl from '@/assets/img/ossfactory.webp';
 import wellnessPreventionImgUrl from '@/assets/img/wellness-prevention.webp';
+import humanBoosterImgUrl from '@/assets/img/humanbooster.svg';
 
 const ossfactory: Experience = {
     name: "ossfactory",
@@ -19,7 +20,7 @@ const ossfactory: Experience = {
     <li>- Veille informatique pour les nouvelles fonctionnalités et choix de technologies</li>
     </ul>`,
     companyDescription: "OSS Factory est une entreprise qui créé des ERP (ou progiciels) pour des TPE/PME adaptés à leurs besoins.",
-    technologies: [python, odoo, js, postgresql, debian, docker, git]
+    technologies: [python, odoo, js, postgresql, debian, docker, git, bootstrap]
 }
 
 const wellnessPrevention: Experience = {
@@ -38,7 +39,26 @@ const wellnessPrevention: Experience = {
     <li>- Conceptualisation UI/UX sur Figma</div></li>
     </ul>`,
     companyDescription: "Wellness Prévention est une startup clermontoise qui créé des applications dans la prévention santé en entreprise.",
-    technologies: [php, symfony, dart, flutter, redis, mysql, debian, docker, git]
+    technologies: [php, symfony, dart, flutter, redis, mysql, debian, docker, git, bootstrap]
 }
 
-export { ossfactory, wellnessPrevention }
+const humanBooster: Experience = {
+    name: "humanbooster",
+    label: "Formation de CDA à Human Booster",
+    mission: "Concepteur Développeur d'applications web et mobile",
+    company: "Human Booster",
+    companyWebsite: "https://humanbooster.com/",
+    companyImageUrl: humanBoosterImgUrl,
+    place: "Clermont-Ferrand",
+    dateStart: new Date(2022, 2, 15),
+    dateEnd: new Date(2023, 1, 14),
+    missionDescription: `<ul>
+        <li>Formation de développeur</li>
+        <li>Annexes: préparation de soutenance, rédation d'un rapport, cours de théâtre pour préparer un exposé</li>
+        <li>Cours non développement : Histoire de l'informatique, UX/UI, Algorithmique, UML, conception de base de données</li>
+    </ul>`,
+    companyDescription: "Human Booster est un centre de formation pour les développeurs dans la région Auvergne Rhône Alpes",
+    technologies: [php, java, android, js, symfony, springBoot, angular, electron, nodeJS, mysql, docker, debian, bootstrap]
+}
+
+export { ossfactory, wellnessPrevention, humanBooster }

@@ -6,7 +6,7 @@ const props = defineProps<NextLinkProps>();
 </script>
 
 <template>
-    <div class="NextLink flex flex-col justify-center items-center">
+    <div class="NextLink flex flex-col justify-center items-center mb-2">
         <span class="mt-5 mb-3 italic dark:text-neutral-300 text-neutral-600">{{ props.label }}</span>
         <RouterLink :to="props.link" class="next-link">
             <div class="circle-angle-down">

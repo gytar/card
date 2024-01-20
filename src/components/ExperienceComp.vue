@@ -11,7 +11,7 @@ const modal = reactive({
 </script>
 <!-- eslint-disable vue/require-v-for-key -->
 <template>
-    <div class="Experience w-full">
+    <div class="Experience">
         <a href="#" class="flex flex-col md:flex-row md:items-center justify-between p-2 ExperienceSmallWidget"
             @click="modal.isOpen = !modal.isOpen">
             <div>
@@ -22,6 +22,7 @@ const modal = reactive({
                 props.experience.dateEnd.toLocaleDateString('default', { month: '2-digit', year: '2-digit' }) }}</span>
         </a>
         <div :class="(modal.isOpen) ? 'ExperienceModalVisible ExperienceModal' : 'ExperienceModalHidden ExperienceModal'">
+            <!-- Title and close button -->
             <div class="flex items-top justify-between w-11/12">
                 <div>
                     <p class="text-2xl font-bold">{{ props.experience.label }}</p>
@@ -37,7 +38,8 @@ const modal = reactive({
                 <a href="#" @click="modal.isOpen = !modal.isOpen" class="text-white text-2xl"><font-awesome-icon
                         icon="close" /></a>
             </div>
-            <div class="flex items-center flex-col xl:flex-row justify-between  mt-5 w-11/12">
+            <!-- Description and company infos -->
+            <div class="flex items-center flex-col xl:flex-row justify-between lg:mt-32 w-11/12">
                 <div class="description">
                     <span class="text-xl italic font-bold">Description de mes missions</span>
                     <div v-html="props.experience.missionDescription" />
@@ -63,7 +65,8 @@ const modal = reactive({
                     </div>
                 </div>
             </div>
-            <div class="mt-5 technical-skill w-11/12">
+            <!-- Technical Skills -->
+            <div class="mt-5 technical-skill w-11/12 lg:mt-32">
                 <span class="text-xl italic font-bold">Stack technique</span>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     <div v-for="technology in props.experience.technologies"
@@ -78,6 +81,7 @@ const modal = reactive({
     </div>
 </template>
 <style scoped>
+
 .ExperienceSmallWidget {
     border: 3px solid hsl(260, 60%, 60%);
     border-radius: 3px;
@@ -104,22 +108,14 @@ const modal = reactive({
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     min-height: 100%;
-    /* transform: translate(-50%, -30%); */
     padding: 1em;
     background: hsl(290, 60%, 40%);
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     align-items: center;
     color: white;
-}
-
-@media screen and (min-width: 1024px) {
-    .ExperienceModalVisible {
-        justify-content: space-around;
-    }
 }
 
 .ExperienceModalHidden {

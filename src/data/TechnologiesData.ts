@@ -25,7 +25,6 @@ import rubyUrl from "@/assets/img/ruby.webp";
 import symfonyUrl from "@/assets/img/symfony.webp";
 import springUrl from '@/assets/img/spring.webp';
 import tailwindCssUrl from "@/assets/img/tailwindcss.webp";
-import typeScriptUrl from "@/assets/img/typescript.webp";
 import vueJsUrl from "@/assets/img/vue-js.webp";
 
 // Languages 

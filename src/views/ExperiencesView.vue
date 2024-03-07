@@ -34,7 +34,7 @@ const humanBoosterRef = ref(humanBooster);
         <div class="skills-container grid grid-cols-3 md:grid-cols-6 w-full lg:w-1/2">
             <div v-for="technology in lang" class="flex flex-col items-center justify-around">
                 <img :src="technology.imageUrl.toString()" :alt="technology.label.toString()" class="technology-img">
-                <span>{{ technology.label }}</span>  
+                <span>{{ technology.label}}</span>  
             </div>
         </div>
         <h5 class="text-2xl font-bold, my-2 text-center">Frameworks</h5>

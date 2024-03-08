@@ -26,6 +26,11 @@ import symfonyUrl from "@/assets/img/symfony.webp";
 import springUrl from '@/assets/img/spring.webp';
 import tailwindCssUrl from "@/assets/img/tailwindcss.webp";
 import vueJsUrl from "@/assets/img/vue-js.webp";
+import bashImgUrl from "@/assets/img/bash.webp";
+import kubernetesImgUrl from "@/assets/img/kubernetes.webp";
+import ansibleImgUrl from "@/assets/img/ansible.webp";
+import vimImgUrl from "@/assets/img/vim.webp";
+import goImgUrl from "@/assets/img/go.webp";
 
 // Languages 
 const python: Technology = {
@@ -82,7 +87,23 @@ const dart: Technology = {
     type: TechnologyType.Language,
 }
 
+const bash: Technology = {
+    name: "bash",
+    label: "Bash",
+    knowledge: 0.75,
+    website: "https://www.gnu.org/software/bash/",
+    imageUrl: bashImgUrl,
+    type: TechnologyType.Language,
+}
 
+const go: Technology = {
+    name: "go",
+    label: "Go",
+    knowledge: 0.2,
+    website: "https://go.dev/",
+    imageUrl: goImgUrl,
+    type: TechnologyType.Language,
+}
 
 // Frameworks
 const django: Technology = {
@@ -227,13 +248,39 @@ const debian: Technology = {
 
 }
 
+const kubernetes: Technology = {
+    name: "kubernetes",
+    label: "Kubernetes",
+    knowledge: 0.5,
+    website: "https://kubernetes.io/",
+    imageUrl: kubernetesImgUrl,
+    type: TechnologyType.DevOps,
+}
+
+const ansible: Technology = {
+    name: "ansible",
+    label: "Ansible",
+    knowledge: 0.3,
+    website: "https://www.ansible.com/",
+    imageUrl: ansibleImgUrl,
+    type: TechnologyType.DevOps,
+}
+
+const vim: Technology = {
+    name: "vim",
+    label: "Vim",
+    knowledge: 0.3,
+    website: "https://www.vim.org/",
+    imageUrl: vimImgUrl,
+    type: TechnologyType.DevOps,
+}
 const git: Technology = {
     name: "git",
     label: "Git",
     knowledge: 0.9,
     website: "https://git-scm.com",
     imageUrl: gitUrl,
-    type: TechnologyType.Others,
+    type: TechnologyType.DevOps,
 
 }
 
@@ -251,31 +298,8 @@ const odoo: Technology = {
 
 // Libraries
 
-const bootstrap: Technology = {
-    name: "bootstrap",
-    label: "Bootstrap",
-    knowledge: 1,
-    website: "",
-    imageUrl: bootstrapUrl,
-    type: TechnologyType.Library,
-
-}
-
-const tailWindCSS: Technology = {
-    name: "tailwindcss",
-    label: "TailwindCSS",
-    knowledge: 0.8,
-    website: "",
-    imageUrl: tailwindCssUrl,
-    type: TechnologyType.Library,
-
-}
-
-const allTechnologies: Array<Technology> = [python, php, js, ruby, java, dart, django, symfony, vue, springBoot, rubyOnRails, flutter, android, mysql, postgresql, redis, docker, debian, git, odoo, bootstrap, tailWindCSS, nodeJS, angular, electron]
-
-const findTechnologyByName = (name: String): Technology | undefined => allTechnologies.find(item => item.name.toLowerCase() == name.toLowerCase());
-
+const allTechnologies: Array<Technology> = [python, bash, go, php, js, java, django, symfony, vue, springBoot, mysql, postgresql, redis, docker, debian, git, odoo, nodeJS, angular, kubernetes, ansible, vim]
 
 const { lang, backend, frontend, others, mobile, devops, database, libraries, erp } = groupItemsBy<Technology, TechnologyType>(allTechnologies, 'type', TechnologyType);
 
-export { python, php, js, ruby, java, dart, django, symfony, vue, springBoot, rubyOnRails, flutter, android, mysql, postgresql, redis, docker, debian, git, odoo, allTechnologies, bootstrap, tailWindCSS, nodeJS, angular, electron, lang, backend, frontend, others, mobile, devops, database, libraries, erp }
+export { python, php, js, ruby, java, dart, django, symfony, vue, springBoot, rubyOnRails, flutter, android, mysql, postgresql, redis, docker, debian, git, odoo, allTechnologies, nodeJS, angular, electron, lang, backend, frontend, others, mobile, devops, database, libraries, erp }

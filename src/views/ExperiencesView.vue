@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue';
-import { ossfactory, wellnessPrevention, humanBooster } from '@/data/ExperiencesData';
-import { lang, backend, frontend, mobile, devops, libraries, database, erp, others}from '@/data/TechnologiesData';
+import { ossfactory, wellnessPrevention, humanBooster, cyberfull } from '@/data/ExperiencesData';
+import { lang, backend, frontend, mobile, devops, libraries, database, erp, others} from '@/data/TechnologiesData';
 import NextLink from '@/components/NextLink.vue';
 import PrevLink from '@/components/PrevLink.vue';
 import ExperienceComp from '@/components/ExperienceComp.vue';
 import type { Experience } from '@/models/Experiences';
 
-
 const experiences: Ref<Experience[]> = ref<Experience[]>([ossfactory, wellnessPrevention]);
-const humanBoosterRef = ref(humanBooster);
+const classes: Ref<Experience[]> = ref<Experience[]>([humanBooster, cyberfull]);
 </script>
 
 <template>
@@ -25,8 +24,10 @@ const humanBoosterRef = ref(humanBooster);
         </div>
         <!-- Courses -->
         <h2 class="text-4xl font-bold my-3 text-center md:w-1/2">Mes Formations</h2>
-        <div class="lg:w-2/3 xl:1/2">
-            <ExperienceComp :experience="humanBoosterRef" />
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
+            <div v-for="experience in classes">
+                <ExperienceComp :experience="experience" />
+            </div>
         </div>
         <!-- Technical skills -->
         <h2 class="text-4xl font-bold my-3 text-center">Mes compétences techniques</h2>
@@ -49,19 +50,15 @@ const humanBoosterRef = ref(humanBooster);
             </div>
         </div>
 
-        <h5 class="text-2xl font-bold, my-2 text-center">CMS et libraries</h5>
-        <div class="skills-container grid grid-cols-3 md:grid-cols-6 w-full lg:w-1/2">
-            <div v-for="technology in erp" class="flex flex-col items-center justify-around">
-                <img :src="technology.imageUrl.toString()" :alt="technology.label.toString()" class="technology-img">
-                <span>{{ technology.label }}</span>  
-            </div>
-            <div v-for="technology in libraries" class="flex flex-col items-center justify-around">
+        <h5 class="text-2xl font-bold, my-2 text-center">DevOps</h5>
+
+        <div class="skills-container grid grid-cols-3 md:grid-cols-7 w-full lg:w-1/2">
+            <div v-for="technology in devops" class="flex flex-col items-center justify-around">
                 <img :src="technology.imageUrl.toString()" :alt="technology.label.toString()" class="technology-img">
                 <span>{{ technology.label }}</span>  
             </div>
         </div>
-
-        <h5 class="text-2xl font-bold, my-2 text-center">Mobile et autres</h5>
+        <h5 class="text-2xl font-bold, my-2 text-center">Autres</h5>
         <div class="skills-container grid grid-cols-3 md:grid-cols-7 w-full lg:w-1/2">
             <div v-for="technology in mobile" class="flex flex-col items-center justify-around">
                 <img :src="technology.imageUrl.toString()" :alt="technology.label.toString()" class="technology-img">
@@ -72,11 +69,16 @@ const humanBoosterRef = ref(humanBooster);
                 <span>{{ technology.label }}</span>  
             </div>
 
-            <div v-for="technology in devops" class="flex flex-col items-center justify-around">
+            <div v-for="technology in database" class="flex flex-col items-center justify-around">
                 <img :src="technology.imageUrl.toString()" :alt="technology.label.toString()" class="technology-img">
                 <span>{{ technology.label }}</span>  
             </div>
-            <div v-for="technology in database" class="flex flex-col items-center justify-around">
+
+            <div v-for="technology in erp" class="flex flex-col items-center justify-around mt-4">
+                <img :src="technology.imageUrl.toString()" :alt="technology.label.toString()" class="technology-img">
+                <span>{{ technology.label }}</span>  
+            </div>
+            <div v-for="technology in libraries" class="flex flex-col items-center justify-around">
                 <img :src="technology.imageUrl.toString()" :alt="technology.label.toString()" class="technology-img">
                 <span>{{ technology.label }}</span>  
             </div>

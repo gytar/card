@@ -10,7 +10,10 @@ import ContactIcon from '@/components/ContactIcon.vue';
 
         <p class="text-2xl mt-10 mb-5">Sur les réseaux</p>
         <div class="grid grid-cols-2 gap-4">
-            <ContactIcon href="https://github.com/gytar" title="GitHub de Guillaume Perrot" icon="fa-brands fa-github" />
+            <div class="flex flex-col justify-center items-center max-w-28">
+                <ContactIcon href="https://github.com/gytar" title="GitHub de Guillaume Perrot" icon="fa-brands fa-github" />
+                <span class="text-slate-200 italic text-xs mt-2 text-center">Vous trouverez mes projets perso ici !</span>
+            </div>
             <ContactIcon href="https://www.linkedin.com/in/guillaume-perrot-dev" title="LinkedIn de Guillaume Perrot" icon="fa-brands fa-linkedin" />
         </div>
 

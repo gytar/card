@@ -8,7 +8,7 @@ import NextLinkVue from '@/components/NextLink.vue';
       <img src="../assets/diamonds.svg" alt="Guillaume Perrot" class="diamond">
     </div>
     <div class="banner">
-      <h3 class="subtitle md:text-lg lg:text-xl text-center">Concepteur développeur d'applications web et mobile</h3>
+      <h3 class="subtitle md:text-lg lg:text-xl text-center">Expert en cloud, infrasctructure et sécurité</h3>
     </div>
     <NextLinkVue link="/about" label="Prêt⋅e⋅s à en voir plus ?" />
   </main>

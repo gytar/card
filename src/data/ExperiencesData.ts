@@ -76,7 +76,7 @@ const cyberfull: Experience = {
         <li>Programmation en Java, MySQL, PHP et Bash</li>
         <li>Intriduction au protocoles et au réseau</li>
     </ul>`,
-    companyDescription: "Cyberfull est un centre de formation clermontois spécialisé dans la cybersécrité."
+    companyDescription: "Cyberfull est un centre de formation clermontois spécialisé dans la cybersécrité.",
     technologies: [java, docker, debian, git, mysql],
 }
 

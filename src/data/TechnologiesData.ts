@@ -302,4 +302,4 @@ const allTechnologies: Array<Technology> = [python, bash, go, php, js, java, dja
 
 const { lang, backend, frontend, others, mobile, devops, database, libraries, erp } = groupItemsBy<Technology, TechnologyType>(allTechnologies, 'type', TechnologyType);
 
-export { python, php, js, ruby, java, dart, django, symfony, vue, springBoot, rubyOnRails, flutter, android, mysql, postgresql, redis, docker, debian, git, odoo, allTechnologies, nodeJS, angular, electron, lang, backend, frontend, others, mobile, devops, database, libraries, erp }
+export { python, php, js, ruby, java, dart, django, symfony, vue, springBoot, rubyOnRails, flutter, android, mysql, postgresql, redis, docker, debian, git, odoo, allTechnologies, nodeJS, angular, electron, lang, backend, frontend, others, mobile, devops, database, libraries, erp, bash }

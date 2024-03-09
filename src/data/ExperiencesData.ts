@@ -1,5 +1,5 @@
 import { type Experience } from "@/models/Experiences";
-import { odoo, postgresql, js, debian, docker, python, git, php, symfony, dart, flutter, redis, mysql, java, android, springBoot, angular, nodeJS, electron } from "@/data/TechnologiesData";
+import { odoo, postgresql, js, debian, docker, python, git, php, symfony, dart, flutter, redis, mysql, java, android, springBoot, angular, nodeJS, electron, bash } from "@/data/TechnologiesData";
 import ossFactoryImgUrl from '@/assets/img/ossfactory.webp';
 import wellnessPreventionImgUrl from '@/assets/img/wellness-prevention.webp';
 import humanBoosterImgUrl from '@/assets/img/humanbooster.svg';
@@ -69,15 +69,16 @@ const cyberfull: Experience = {
     companyWebsite: "https://www.cyber-full.fr", 
     companyImageUrl: cyberfullImgUrl, 
     place: "Clermont-Ferrand",
-    dateStart: new Date(2021, 10, 15),
+    dateStart: new Date(2021, 9, 15),
     dateEnd: new Date(2022, 2, 14),
     missionDescription: `<ul>
         <li>Apprentissage des textes de loi sur le numérique, pentesting et bases de la cybersécurité</li>
         <li>Programmation en Java, MySQL, PHP et Bash</li>
-        <li>Intriduction au protocoles et au réseau</li>
+        <li>Introduction au protocoles et au réseau</li>
     </ul>`,
     companyDescription: "Cyberfull est un centre de formation clermontois spécialisé dans la cybersécrité.",
-    technologies: [java, docker, debian, git, mysql],
+    technologies: [java, docker, debian, git, mysql, bash],
 }
 
 export { ossfactory, wellnessPrevention, humanBooster, cyberfull }
+
